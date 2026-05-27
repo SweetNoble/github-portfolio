@@ -1,1 +1,1 @@
-A compiled portfolio of all my projects.
+A portfolio of all my projects.
