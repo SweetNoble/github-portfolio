@@ -1,0 +1,272 @@
+web.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>E-MobiRent Sidebar Demo</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="bootstrap-custom.css">
+    <link rel="icon" type="image/png" href="emobirent_logo.png">
+    <style>
+        /* Additional Bootstrap overrides to maintain design */
+        :root {
+            --bs-primary: #0B5FB0;
+            --bs-primary-rgb: 11, 95, 176;
+            --bs-secondary: #2BA3EC;
+            --bs-secondary-rgb: 43, 163, 236;
+        }
+        body {
+            background: #EBFCFF;
+            color: #0F214D;
+        }
+        .navbar {
+            background: #0B5FB0;
+        }
+        .btn-primary {
+            background: #2BA3EC;
+            border-color: #2BA3EC;
+        }
+        .btn-primary:hover {
+            background: #0B5FB0;
+            border-color: #0B5FB0;
+        }
+
+        .discount-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 28px rgba(43, 163, 236, 0.13) !important;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+
+        .discount-card img {
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    object-fit: cover;
+    height: 180px;
+    width: 100%;
+}
+
+.discount-card .card-body {
+    background-color: #fafafa; /* Matches system theme */
+    color: #0F214D;
+    padding: 1.25rem;
+}
+
+.discount-card h3 {
+    font-weight: 600;
+}
+
+.discount-card h4 {
+    font-weight: 700;
+    color: #2BA3EC; /* Theme primary accent */
+}
+
+.discount-card p {
+    margin-bottom: 0.25rem;
+}
+    </style>
+</head>
+<body>
+    <!-- Sidebar Toggle -->
+    <input type="checkbox" id="sidebar-toggle" />
+    <label for="sidebar-toggle" class="sidebar-toggle-label" aria-label="Toggle sidebar">&#9776;</label>
+    
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h1>E-MobiRent</h1>
+        <nav aria-label="Sidebar navigation">
+            <a href="web.html" class="active">Home</a>
+            <a href="vehicles.html">Vehicles</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Header -->
+        <header class="main-header">
+            <img src="bgg (1).png" alt="Header Background" class="header-bg-img" />
+            <div class="header-content">
+                <div class="logo">
+                    <img src="emobirent_logo.png" alt="E-MobiRent Logo" />
+                    <span>E-MobiRent</span>
+                </div>
+                <label for="sidebar-toggle" class="sidebar-toggle-label" aria-label="Toggle sidebar">&#9776;</label>
+            </div>
+            <div class="hero">
+                <h2>Looking for an electric vehicle?</h2>
+                <h1>You're in the perfect spot.</h1>
+                <div class="hero-features">
+                    <span>🔋 Clean &amp; green</span>
+                    <span>💸 Affordable rates</span>
+                    <span>⚡ Fast charging</span>
+                </div>
+                <a href="vehicles.html" class="btn btn-primary btn-lg rounded-pill px-4 py-2">Browse Vehicles</a>
+            </div>
+        </header>
+
+        <main>
+            <!-- Welcome Section -->
+            <section class="container py-5">
+                <h2 class="text-center mb-4">Welcome to E-MobiRent</h2>
+                <p class="text-center mx-auto" style="max-width: 700px;">
+                    Discover a new way to travel with our electric vehicle rentals. Clean, affordable, and convenient—E-MobiRent is your partner for a greener future.
+                </p>
+            </section>
+
+            <!-- Features Section -->
+            <section class="container py-5">
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <span class="feature-icon">📞</span>
+                                <h3 class="h5 mt-3">24/7 Support</h3>
+                                <p class="card-text">We're always here to help, day or night.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <span class="feature-icon">📝</span>
+                                <h3 class="h5 mt-3">Easy Booking</h3>
+                                <p class="card-text">Reserve your EV in just a few clicks.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <span class="feature-icon">🌱</span>
+                                <h3 class="h5 mt-3">Eco-Friendly Fleet</h3>
+                                <p class="card-text">Drive clean with our all-electric vehicles.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <span class="feature-icon">🔄</span>
+                                <h3 class="h5 mt-3">Flexible Plans</h3>
+                                <p class="card-text">Choose the rental plan that fits your needs.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Discount Section -->
+            <section class="container py-5">
+                <h2 class="text-center mb-4">Exciting Discount Offers</h2>
+                <div class="row g-4">
+                    <!-- First Ride -->
+                    <div class="col-md-4">
+                        <div class="card discount-card h-100 border-0 shadow-sm text-center">
+                            <img src="discount1.png" alt="First Ride" class="card-img-top img-fluid">
+                            <div class="card-body">
+                                <h3 class="h5 text-primary">First Ride</h3>
+                                <p class="text-muted mb-1">Get</p>
+                                <h4 class="display-6 text-primary">50% OFF</h4>
+                                <p class="mt-2">on your first booking.</p>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Weekly Saver -->
+                    <div class="col-md-4">
+                        <div class="card discount-card h-100 border-0 shadow-sm text-center">
+                            <img src="discount2.png" alt="Weekly Saver" class="card-img-top img-fluid">
+                            <div class="card-body">
+                                <h3 class="h5 text-primary">Weekly Saver</h3>
+                                <p class="text-muted mb-1">Enjoy</p>
+                                <h4 class="display-6 text-primary">30% OFF</h4>
+                                <p class="mt-2">on 7-day rentals or more.</p>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Refer & Earn -->
+                    <div class="col-md-4">
+                        <div class="card discount-card h-100 border-0 shadow-sm text-center">
+                            <img src="discount3.png" alt="Refer & Earn" class="card-img-top img-fluid">
+                            <div class="card-body">
+                                <h3 class="h5 text-primary">Refer & Earn</h3>
+                                <p class="text-muted mb-1">Get</p>
+                                <h4 class="display-6 text-primary">₱200 Credit</h4>
+                                <p class="mt-2">when your friend completes a ride.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            
+
+
+            <!-- Support Section -->
+            <section class="container py-5">
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="card border-0 shadow-sm bg-gradient">
+                            <div class="card-body text-center p-4">
+                                <h3 class="h4 mb-3">Need help or have questions?</h3>
+                                <p class="mb-4">Our team is ready to assist you. Reach out anytime!</p>
+                                <a href="contact.html" class="btn btn-primary rounded-pill px-4">Contact Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer bg-dark text-light py-5 text-center">
+            <div class="container">
+              <!-- All sections stacked and centered -->
+              <div class="row gx-0.5 justify-content-center text-center">
+                
+                <!-- Brand -->
+                <div class="col-12 col-md-4">
+                  <h5 class="text-primary">E-MobiRent</h5>
+                  <p>Your reliable partner for electric vehicle rentals. Drive the future, today.</p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="col-12 col-md-4">
+                  <h5 class="text-primary">Quick Links</h5>
+                  <ul class="list-unstyled d-flex flex-column align-items-center gap-2">
+                    <li><a href="web.html" class="text-light text-decoration-none">Home</a></li>
+                    <li><a href="about.html" class="text-light text-decoration-none">About Us</a></li>
+                    <li><a href="vehicles.html" class="text-light text-decoration-none">Vehicles</a></li>
+                    <li><a href="contact.html" class="text-light text-decoration-none">Contact Us</a></li>
+                    <li><a href="login.html" class="text-light text-decoration-none">Log in</a></li>
+                  </ul>
+                </div>
+                
+                <!-- Social Media -->
+                <div class="col-12 col-md-4">
+                  <h5 class="text-primary">Connect</h5>
+                  <div class="d-flex justify-content-center gap-4">
+                    <a href="#"><img src="facebook-svgrepo-com.svg" alt="Facebook" height="28"></a>
+                    <a href="#"><img src="tiktok-fill-svgrepo-com.svg" alt="Tiktok" height="28"></a>
+                    <a href="#"><img src="instagram-svgrepo-com.svg" alt="Instagram" height="28"></a>
+                  </div>
+                </div>
+              </div>
+          
+              <!-- Copyright -->
+              <div class="border-top border-secondary mt-5 pt-3">
+                <p class="mb-0">© 2025 E-MobiRent. All rights reserved.</p>
+              </div>
+            </div>
+          </footer>
+          
+
+    
+</body>
+</html> 

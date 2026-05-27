@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Withdrawal System</title>
+    </head>
+    <body>
+        <h3>Deposit and Withdrawal System</h3>
+
+        <p id="balance">Current balance: 100</p>
+        <hr>
+
+        <form id="transacForm">
+            <label>Select Transaction:</label>
+            <br>
+            <input type="radio" name="action" id="withdraw" value="withdraw" required>Withdraw
+            <input type="radio" name="action" id="deposit" value="deposit" required>Deposit
+            <hr>
+            <label>Enter Amount:</label>
+            <br>
+            <input type="number" id="amount" required>
+            <button onclick="transact()">Submit</button>
+             </form>
+
+            <p id="output"></p>
+
+            <script>
+                var balance = 100;
+
+                function transaction(action, amount){
+                    var message = "";
+
+                    do{
+                        if(isNan(amount) || amount<= 0){
+                            message = "Please enter a valid number amount.";
+                            break;
+                        } 
+                        if(action == "withdraw"){
+                            if (amount>balance){
+                                message = "Insufficient Funds. Please try again.";
+                                break;
+                            }else{
+                                balance -= amount;
+                                message = "You withdrew " +amount+ "pesos. Remaining balance: " + balance +"pesos.";
+                                break 
+                            }
+                        }
+                        else if(action == "deposit"){
+                            balance += amount;
+                            message = "You deposited " +amount+"pesos. New Balance: " + balance +"pesos.";
+                        }
+
+                        document.getElementById("balance").innerText = "Current Balance = Php" + balance;
+
+                        if(balance<=0){
+                            message +="<br>No remaining balance!";
+                            break;
+                        }
+
+                    }while(false);
+
+                    document.getElementById("output").innerHTML = message;
+                }
+
+                    document.getElementById("transactionForm").addEventListener("submit", function(e) {
+                    e.preventDefault();
+
+                     var action = document.querySelector('input[name="action"]:checked').value;
+                    var amount = parseFloat(document.getElementById("amount").value);
+
+                    transaction(action, amount);
+
+                    document.getElementById("amount").value="";
+                    document.querySelectorAll('inout[name="action"]').forEach(radio=>radio.checked =false);
+                    });
+
+
+            </script>
+    </body>
+</html>
