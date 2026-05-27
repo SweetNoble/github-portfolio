@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alyssa Portfolio</title>
+
+    <!-- Fonts + Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: radial-gradient(circle at top, #06140d, #020704);
+            color: #eafff1;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #06351f, #020704);
+            border-bottom: 1px solid #1aff8c;
+        }
+
+        header img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid #1aff8c;
+            margin-bottom: 15px;
+            box-shadow: 0 0 20px rgba(26,255,140,0.5);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            color: #1aff8c;
+        }
+
+        header p {
+            color: #c9ffe0;
+            margin-top: 10px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            padding: 15px;
+            background: #03110a;
+            border-bottom: 1px solid #1aff8c;
+            position: sticky;
+            top: 0;
+        }
+
+        nav a {
+            color: #9fffd0;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #1aff8c;
+            text-shadow: 0 0 10px #1aff8c;
+        }
+
+        section {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #1aff8c;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-left: 4px solid #1aff8c;
+            padding-left: 10px;
+        }
+
+        .about-box {
+            background: rgba(10, 30, 20, 0.7);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid #1aff8c;
+            box-shadow: 0 0 15px rgba(26,255,140,0.15);
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: rgba(10, 30, 20, 0.8);
+            border: 1px solid #1aff8c;
+            border-radius: 15px;
+            padding: 20px;
+            transition: 0.3s;
+            box-shadow: 0 0 10px rgba(26,255,140,0.1);
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 0 25px rgba(26,255,140,0.4);
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            color: #9fffd0;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .contact-box {
+            background: rgba(10, 30, 20, 0.7);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid #1aff8c;
+        }
+
+        .contact-box p {
+            margin: 10px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            border-top: 1px solid #1aff8c;
+            color: #9fffd0;
+            margin-top: 40px;
+        }
+
+        .glow {
+            text-shadow: 0 0 12px #1aff8c;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <img src="https://i.imgur.com/6VBx3io.png" alt="Profile">
+    <h1 class="glow">Hi, I'm Alyssa</h1>
+    <p>| Second-year BSIT Student |</p>
+</header>
+
+<nav>
+    <a href="#about"><i class="fa-solid fa-user"></i> About</a>
+    <a href="#projects"><i class="fa-solid fa-code"></i> Projects</a>
+    <a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a>
+</nav>
+
+<section id="about">
+    <h2><i class="fa-solid fa-circle-info"></i> About Me</h2>
+    <div class="about-box">
+        I am a second-year college student passionate about web design and development. I enjoy building clean,
+        modern, and responsive websites using HTML, CSS, and Java. I aim to become a professional developer
+        and create impactful tech solutions.
+    </div>
+</section>
+
+<section id="projects">
+    <h2><i class="fa-solid fa-diagram-project"></i> My Projects</h2>
+
+    <div class="projects">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c" alt="project">
+            <h3><i class="fa-solid fa-car"></i> Emobirent</h3>
+            <p>A smart rental and mobility system designed for easy and fast vehicle booking services.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71" alt="project">
+            <h3><i class="fa-solid fa-film"></i> Movie Ticketing System</h3>
+            <p>A digital ticket reservation system for booking and managing movie seats efficiently.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e" alt="project">
+            <h3><i class="fa-solid fa-leaf"></i> Green Horizon</h3>
+            <p>An eco-focused platform promoting sustainability and environmental awareness initiatives.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2><i class="fa-solid fa-paper-plane"></i> Contact</h2>
+    <div class="contact-box">
+        <p><i class="fa-solid fa-envelope"></i> alyssaadana@email.com</p>
+        <p><i class="fa-solid fa-location-dot"></i> Davao, Philippines</p>
+        <p><i class="fa-brands fa-github"></i> github.com/yourusername</p>
+    </div>
+</section>
+
+<footer>
+    © 2026 Alyssa Portfolio |
+</footer>
+
+</body>
+</html>
